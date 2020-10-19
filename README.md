@@ -10,8 +10,8 @@
   run rails db:setup -> Creates databases defined in database.yml file
   run rails db:migrate -> creates schema.rb file and updates database
 10. Create rake task
-- create one import_movies_csv.task file under lib/tasks
-- create one import_review_csv.task file under lib/tasks
-- run both the tasks 
+  - create one import_movies_csv.task file under lib/tasks
+  - create one import_review_csv.task file under lib/tasks
+  - run both the tasks 
 11. Create movies, reviews controller and view file 
 12. Used simple search form and sort
