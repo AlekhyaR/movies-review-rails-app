@@ -1,0 +1,37 @@
+<h1>Movies</h1>
+<h4>Search by actor: </h4>
+<%= form_tag(root_path, method: :get) do %>
+  <%= text_field_tag(:search, params[:search]) %>
+  <%= submit_tag ("Search") %>
+<% end %>
+<%= form_tag(root_path, method: :get) do %>
+  <%= hidden_field_tag(:stars, params[:sort]) %>
+  <%= submit_tag ("Sort") %>
+<% end %>
+
+<table>
+  <thead>
+    <tr></tr>
+    <tr>
+      <th>Title</th>
+      <th>Director</th>
+      <th>Year</th>
+      <th>Actor</th>
+      <th>Filming Location</th>
+      <th>Country</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @movies.each do |movie| %>
+    <tr>
+      <td><%= movie.movie %></td>
+      <td><%= movie.director %></td>
+      <td><%= movie.year %></td>
+      <td><%= movie.actor %></td>
+      <td><%= movie.filming_location %></td>
+      <td><%= movie.country %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+<br>
